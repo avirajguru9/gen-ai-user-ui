@@ -1,0 +1,18 @@
+<p>bar-chart works!</p>
+<div class="chart-container">
+    <canvas  id="MyChart" >{{ chart }}</canvas>
+    <div>
+        <table>
+            <thead>
+                <tr><th>Date</th><th>Sale</th><th>Profit</th></tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let index of chart.data.labels; index as i">
+                    <td>{{index}}</td>
+                    <td>{{chart.data.datasets[0].data[i]}}</td>
+                    <td>{{chart.data.datasets[1].data[i]}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
