@@ -1,0 +1,72 @@
+<div class="container px-5 my-5">
+    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+        <div class="mb-3">
+            <label class="form-label" for="name">Name</label>
+            <input class="form-control" id="name" type="text" placeholder="Name" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="surname">Surname</label>
+            <input class="form-control" id="surname" type="text" placeholder="Surname" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="surname:required">Surname is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="birthDate">Birth Date</label>
+            <input class="form-control" id="birthDate" type="text" placeholder="Birth Date" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="birthDate:required">Birth Date is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="emailAddress">Email Address</label>
+            <input class="form-control" id="emailAddress" type="text" placeholder="Email Address" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="mobileNumber">Mobile Number</label>
+            <input class="form-control" id="mobileNumber" type="text" placeholder="Mobile Number" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="mobileNumber:required">Mobile Number is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="panNumber">PAN Number</label>
+            <input class="form-control" id="panNumber" type="text" placeholder="PAN Number" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="panNumber:required">PAN Number is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="address">Address</label>
+            <textarea class="form-control" id="address" type="text" placeholder="Address" style="height: 10rem;" data-sb-validations="required"></textarea>
+            <div class="invalid-feedback" data-sb-feedback="address:required">Address is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="city">City</label>
+            <input class="form-control" id="city" type="text" placeholder="City" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="city:required">City is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="pinCode">Pin Code</label>
+            <input class="form-control" id="pinCode" type="text" placeholder="Pin Code" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="pinCode:required">Pin Code is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="state">State</label>
+            <input class="form-control" id="state" type="text" placeholder="State" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="state:required">State is required.</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="country">Country</label>
+            <input class="form-control" id="country" type="text" placeholder="Country" data-sb-validations="required" />
+            <div class="invalid-feedback" data-sb-feedback="country:required">Country is required.</div>
+        </div>
+        <div class="d-none" id="submitSuccessMessage">
+            <div class="text-center mb-3">
+                <div class="fw-bolder">Form submission successful!</div>
+                <p>To activate this form, sign up at</p>
+                <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+            </div>
+        </div>
+        <div class="d-none" id="submitErrorMessage">
+            <div class="text-center text-danger mb-3">Error sending message!</div>
+        </div>
+        <div class="d-grid">
+            <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
