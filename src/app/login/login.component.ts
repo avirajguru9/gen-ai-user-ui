@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../service/authentication.service';
+import { GlobalService } from '../global.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,10 @@ import { AuthenticationService } from '../service/authentication.service';
 
 export class LoginComponent {
 
-  constructor(private route:Router, private auth:AuthenticationService){}
+  constructor(private globalService:GlobalService,private route:Router, private auth:AuthenticationService){
+    globalService.showFooter=false;
+    globalService.showHeader=false;
+  }
 
   errorMessage: any;
   loginFlag = false;

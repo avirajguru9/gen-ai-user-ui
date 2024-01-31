@@ -1,72 +1,101 @@
-<div class="container px-5 my-5">
-    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-        <div class="mb-3">
-            <label class="form-label" for="name">Name</label>
-            <input class="form-control" id="name" type="text" placeholder="Name" data-sb-validations="required" />
-            <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+<!-- Section: Design Block -->
+<section class="text-center">
+    <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+          margin-top: 10px;
+          background: hsla(0, 0%, 100%, 0.8);
+          backdrop-filter: blur(30px);
+          ">
+      <div class="card-body py-5 px-md-5">
+  
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-8">
+            <h5 class="fw-bold mb-5">Sign up now</h5>
+            <form (ngSubmit)="registerUser()" #userForm="ngForm">
+              <!-- 2 column grid layout with text inputs for the first and last names -->
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text"
+                    #name="ngModel" 
+                    [(ngModel)]="userData.name"
+                    id="name" name="name" class="form-control"
+                    placeholder="Enter a your full name" />
+                    <!-- <label class="form-label" for="form3Example1">First name</label> -->
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="email"
+                    #email="ngModel" 
+                    [(ngModel)]="userData.email"
+                    id="email" name="email" class="form-control"
+                    placeholder="Enter a valid email address" />
+                    <!-- <label class="form-label" for="form3Example2">Last name</label> -->
+                  </div>
+                </div>
+              </div>
+  
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="number"
+                    #mobile="ngModel" 
+                    [(ngModel)]="userData.mobile"
+                    id="mobile" name="mobile" class="form-control"                    
+                    placeholder="Enter a valid Mobile Number" />
+                    <!-- <label class="form-label" for="form3Example3">Email address</label> -->
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="password"
+                     id="form3Example2" class="form-control" 
+                    placeholder="Enter Password"/>
+                    <!-- <label class="form-label" for="form3Example4">Password</label> -->
+                  </div>
+                </div>
+              </div>
+  
+  
+              <!-- Checkbox -->
+              <div class="form-check d-flex justify-content-center mb-4">
+                <input class="form-check-input me-2" type="checkbox"
+                #subscription="ngModel" 
+                [(ngModel)]="userData.subscription"
+                value="" id="subscription" name="subscription" checked />
+                <label class="form-check-label" for="subscription">
+                  Subscribe to our newsletter
+                </label>
+              </div>
+  
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-primary btn-block mb-4">
+                Sign up
+              </button>
+              <p class="small fw-bold mt-2 pt-1 mb-0">Go to <a href="\login"
+                class="link-Primary">Login</a></p>
+              <!-- <div class="text-center">
+                <p>or sign up with:</p>
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-facebook-f"></i>
+                </button>
+  
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-google"></i>
+                </button>
+  
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-twitter"></i>
+                </button>
+  
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-github"></i>
+                </button>
+              </div> -->
+            </form>
+          </div>
         </div>
-        <div class="mb-3">
-            <label class="form-label" for="surname">Surname</label>
-            <input class="form-control" id="surname" type="text" placeholder="Surname" data-sb-validations="required" />
-            <div class="invalid-feedback" data-sb-feedback="surname:required">Surname is required.</div>
-        </div>
-        <div class="mb-3">
-            <label class="form-label" for="birthDate">Birth Date</label>
-            <input class="form-control" id="birthDate" type="text" placeholder="Birth Date" data-sb-validations="required" />
-            <div class="invalid-feedback" data-sb-feedback="birthDate:required">Birth Date is required.</div>
-        </div>
-        <div class="mb-3">
-            <label class="form-label" for="emailAddress">Email Address</label>
-            <input class="form-control" id="emailAddress" type="text" placeholder="Email Address" data-sb-validations="required" />
-            <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
-        </div>
-        <div class="mb-3">
-            <label class="form-label" for="mobileNumber">Mobile Number</label>
-            <input class="form-control" id="mobileNumber" type="text" placeholder="Mobile Number" data-sb-validations="required" />
-            <div class="invalid-feedback" data-sb-feedback="mobileNumber:required">Mobile Number is required.</div>
-        </div>
-        <div class="mb-3">
-            <label class="form-label" for="panNumber">PAN Number</label>
-            <input class="form-control" id="panNumber" type="text" placeholder="PAN Number" data-sb-validations="required" />
-            <div class="invalid-feedback" data-sb-feedback="panNumber:required">PAN Number is required.</div>
-        </div>
-        <div class="mb-3">
-            <label class="form-label" for="address">Address</label>
-            <textarea class="form-control" id="address" type="text" placeholder="Address" style="height: 10rem;" data-sb-validations="required"></textarea>
-            <div class="invalid-feedback" data-sb-feedback="address:required">Address is required.</div>
-        </div>
-        <div class="mb-3">
-            <label class="form-label" for="city">City</label>
-            <input class="form-control" id="city" type="text" placeholder="City" data-sb-validations="required" />
-            <div class="invalid-feedback" data-sb-feedback="city:required">City is required.</div>
-        </div>
-        <div class="mb-3">
-            <label class="form-label" for="pinCode">Pin Code</label>
-            <input class="form-control" id="pinCode" type="text" placeholder="Pin Code" data-sb-validations="required" />
-            <div class="invalid-feedback" data-sb-feedback="pinCode:required">Pin Code is required.</div>
-        </div>
-        <div class="mb-3">
-            <label class="form-label" for="state">State</label>
-            <input class="form-control" id="state" type="text" placeholder="State" data-sb-validations="required" />
-            <div class="invalid-feedback" data-sb-feedback="state:required">State is required.</div>
-        </div>
-        <div class="mb-3">
-            <label class="form-label" for="country">Country</label>
-            <input class="form-control" id="country" type="text" placeholder="Country" data-sb-validations="required" />
-            <div class="invalid-feedback" data-sb-feedback="country:required">Country is required.</div>
-        </div>
-        <div class="d-none" id="submitSuccessMessage">
-            <div class="text-center mb-3">
-                <div class="fw-bolder">Form submission successful!</div>
-                <p>To activate this form, sign up at</p>
-                <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-            </div>
-        </div>
-        <div class="d-none" id="submitErrorMessage">
-            <div class="text-center text-danger mb-3">Error sending message!</div>
-        </div>
-        <div class="d-grid">
-            <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button>
-        </div>
-    </form>
-</div>
+      </div>
+    </div>
+  </section>
+  <!-- Section: Design Block -->

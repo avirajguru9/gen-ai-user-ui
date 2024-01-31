@@ -1,15 +1,6 @@
-<app-stock-header></app-stock-header>
-
-<!-- <h3>{{ title }}</h3> -->
-<!--<title>{{ title }}</title>
-<h1>{{ title }}</h1>
-<input type="text" id="tx_bday" name="tx_bday"/>
- <button (click)="calculateAge()">Calculate Age</button> -->
-<!-- <app-login></app-login> -->
-<!-- <app-bar-chart></app-bar-chart> -->
-
+<app-stock-header *ngIf="globalService.showHeader"></app-stock-header>
 <div class="container">
+    <br><br>
     <router-outlet></router-outlet>
 </div>
-
-<app-stock-footer></app-stock-footer>
+<app-footer *ngIf="globalService.showFooter"></app-footer>

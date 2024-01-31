@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { GlobalService } from '../global.service';
 
 @Component({
   selector: 'app-home',
@@ -7,10 +8,9 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-
-  constructor(private route:ActivatedRoute){}
-  name='';
-  ngOnInit(){
-    this.name = this.route.snapshot.params['name'];
+  constructor(private globalService:GlobalService,private route:ActivatedRoute){
+    globalService.showFooter=true;
+    globalService.showHeader=true;
   }
+  name='';
 }

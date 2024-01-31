@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StockHeaderComponent } from './stock-header.component';
+import { StockHeaderComponent } from './header.component';
 
 describe('StockHeaderComponent', () => {
   let component: StockHeaderComponent;
