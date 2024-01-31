@@ -31,4 +31,8 @@ export class UserDataService {
     return this.http.post(`${API_URL}/user/user_register`,user);
   }
 
+  updateSubscription(id:number,user_subs:any){
+    return this.http.put<any>(`${API_URL}/user/user_subscription/${id}`,{},{params:user_subs});
+  }
+
 }

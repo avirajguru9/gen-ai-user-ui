@@ -17,7 +17,13 @@
           <td>{{user.name}}</td>
           <td>{{user.email}}</td>
           <td>{{user.mobile}}</td>
-          <td>{{user.subscription}}</td>
+          <td>
+            <input class="form-check-input me-2" type="checkbox" 
+            value=""
+            name="subscription"
+            [checked]="user.subscription"
+            (change)="manageSubscription(user.id,$event)" />
+            {{user.subscription}}</td>
         </tr>
       </tbody>
       <!-- <tfoot>
