@@ -13,4 +13,7 @@ export class HomeComponent {
     globalService.showHeader=true;
   }
   name='';
+  ngOnInit(){
+    this.name = this.route.snapshot.params['name'];
+  }
 }

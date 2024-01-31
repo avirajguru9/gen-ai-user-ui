@@ -14,6 +14,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LogoutComponent } from './logout/logout.component';
 import { UserComponent } from './user/user.component';
+import { NotificationComponent } from './notification/notification.component';
+import { SubscriptionComponent } from './subscription/subscription.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { UserComponent } from './user/user.component';
     HeaderComponent,
     FooterComponent,
     LogoutComponent,
-    UserComponent
+    UserComponent,
+    NotificationComponent,
+    SubscriptionComponent
   ],
   imports: [
     BrowserModule,
